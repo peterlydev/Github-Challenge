@@ -4,6 +4,8 @@ import '../App.css'
 
 export default function RepoDetails({details, loading}) {
 
+    
+
 
     if (loading) {
         return (
@@ -16,6 +18,14 @@ export default function RepoDetails({details, loading}) {
                 <label className="label">Repo Name 	
                 &#128062;</label>
                 <span className="value">{details.name}</span>
+            </div>
+            <div className="details-row">
+                <label className="label">Date created &#128368; </label>
+                <span className="value">{details.created_at}</span>
+            </div>
+            <div className="details-row">
+                <label className="label">Date updated &#8986; </label>
+                <span className="value">{details.updated_at}</span>
             </div>
             <div className="details-row">
                 <label className="label">How many forks? &#8916; </label>
