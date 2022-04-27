@@ -9,7 +9,6 @@ const Users = () => {
     const [username, setUsername] = useState('');
     const [isPending, setIsPending] = useState(false);
     const [repos, setRepos] = useState([]);
-
     const [details, setDetails] = useState({});
     const [loadingDetails, setLoadingDetails] = useState(false);
 
@@ -18,7 +17,7 @@ const Users = () => {
         setRepos([]);
         setDetails({});
 
-    }, []);
+    }, [username]);
 
     //-- Defining functions when submitting Github names //
 
@@ -39,7 +38,7 @@ const Users = () => {
             setIsPending(false);
             //setRepos will show the data fetched
             setRepos(res.data);
-            console.log(res.data)
+            // console.log(res.data)
         });
     }
 
@@ -75,6 +74,7 @@ const Users = () => {
     
     return (
         <div className='page'>
+        <RepoDetails details={details} loading={loadingDetails} />
             <form className='form'>
                 <input 
                 className='input' value={username} onChange={e => {setUsername(e.target.value)}} placeholder='Enter GitHub userName'/>
@@ -83,8 +83,6 @@ const Users = () => {
                 <div className='results'>
                 <h3 className="repo-heading">You are now viewing {username}'s Repos:</h3> {repos.map(renderRows)}
                     </div>
-
-                    <RepoDetails details={details} loading={loadingDetails} />
                 </div>
     )
 };

@@ -1,18 +1,41 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
-const RepoDetails = (details) => {
+import '../App.css'
 
+export default function RepoDetails({details, loading}) {
+
+
+    if (loading) {
+        return (
+            <h1 className="loader">Loading... </h1>
+        )
+    }
     return (
-        <div className="repo-details">
-        <button>Back</button>
-        <h2> Name: {details.name}</h2>
-        <h2> Language: {details.language}</h2>
-        <h2> Stars: {details.stargazers_count}</h2>
-        <h2> Watchers: {details.watchers_count}</h2>
-
-    </div>
+        <div className="repo-details-container">
+            <div className="details-row">
+                <label className="label">Repo Name 	
+                &#128062;</label>
+                <span className="value">{details.name}</span>
+            </div>
+            <div className="details-row">
+                <label className="label">How many forks? &#8916; </label>
+                <span className="value">{details.forks}</span>
+            </div>
+            <div className="details-row"> 
+                <label className="label">What language? &#35486;</label>
+                <span className="value">{details.language}</span> 
+            </div>
+            <div className="details-row"> 
+                <label className="label">How many Stars? &#9733;</label>
+                <span className="value">{details.stargazers_count}</span> 
+            </div>
+            <div className="details-row"> 
+                <label className="label">How many Watchers? &#128064;</label>
+                <span className="value">{details.watchers_count}</span> 
+            </div>
+           
+        </div>
     )
-}
 
-export default RepoDetails
+    }
+

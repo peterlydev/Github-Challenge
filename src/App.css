@@ -52,13 +52,27 @@ button:hover{
   background-color: silver;
 }
 
-h3{
+h3, .repo-details-container{
   margin: 15px;
 }
 
 hr{
   background-color: black;
   margin: 20px;
+}
+
+.repo-details-container{
+  font-weight: bold;
+  border: 1px dashed gray;
+}
+
+.details-row{
+  margin: 10px;
+  text-align: left;
+}
+
+.details-row .value{
+  float:right;
 }
 
 

@@ -6,7 +6,6 @@ function App() {
     <div className="App">
     <h1>Want to see other people's projects? Enter a Github username and Voila!</h1>
     <RepoPage />
-
     </div>
   );
 }
