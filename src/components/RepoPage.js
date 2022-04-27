@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import RepoDetails from './RepoDetails';
+import ScrollToTop from './ScrollToTop';
 import '../App.css'
 // import RandomPage from './RandomPage';
 
@@ -45,17 +46,14 @@ const Users = () => {
     function renderRows(repo) {
         return(
             <div 
-                className='row' 
+                className='repo-button' 
                 onClick={() => getDetails(repo.name)}
                 key={repo.id}
             >
                 <h3 className='repo-name'>
                 {repo.name}
-                <button> View Repo</button>
+                <button onCLick={<ScrollToTop />}>View Repo</button>
                 </h3>
-
-                <hr>
-                </hr>
             </div>
 
         )
