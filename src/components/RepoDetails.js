@@ -26,7 +26,7 @@ export default function RepoDetails({details, loading}) {
                 <span className="value">{details.language}</span> 
             </div>
             <div className="details-row"> 
-                <label className="label">How many Stars? &#9733;</label>
+                <label className="label">How many Stargazers? &#9733;</label>
                 <span className="value">{details.stargazers_count}</span> 
             </div>
             <div className="details-row"> 

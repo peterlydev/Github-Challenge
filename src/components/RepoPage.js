@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import RepoDetails from './RepoDetails';
-import ScrollToTop from './ScrollToTop';
+
 import '../App.css'
 // import RandomPage from './RandomPage';
 
@@ -19,6 +19,12 @@ const Users = () => {
         setDetails({});
 
     }, [username]);
+
+   function ScrollToTop(e){
+       e.preventDefault();
+       <ScrollToTop />
+
+   }
 
     //-- Defining functions when submitting Github names //
 
@@ -52,7 +58,7 @@ const Users = () => {
             >
                 <h3 className='repo-name'>
                 {repo.name}
-                <button onCLick={<ScrollToTop />}>View Repo</button>
+                <button onClick={window.scrollTo({top:0,behavior:'smooth'})}>View Repo</button>
                 </h3>
             </div>
 
