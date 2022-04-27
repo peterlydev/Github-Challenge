@@ -1,5 +1,4 @@
 import './App.css';
-import RandomPage from './components/RandomPage';
 import RepoPage from './components/RepoPage';
 
 function App() {

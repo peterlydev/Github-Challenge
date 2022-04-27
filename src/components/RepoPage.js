@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-// import RepoDetails from './RepoDetails';
+import RepoDetails from './RepoDetails';
 import '../App.css'
 // import RandomPage from './RandomPage';
 
@@ -83,6 +83,8 @@ const Users = () => {
                 <div className='results'>
                 <h3 className="repo-heading">You are now viewing {username}'s Repos:</h3> {repos.map(renderRows)}
                     </div>
+
+                    <RepoDetails details={details} loading={loadingDetails} />
                 </div>
     )
 };
