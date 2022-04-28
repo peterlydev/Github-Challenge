@@ -73,7 +73,6 @@ const Users = () => {
             setLoadingDetails(false);
             setDetails(res.data);
         });        
-        
     }
     
     return (
